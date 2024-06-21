@@ -1,20 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="row">
+        <h2>Friends</h2>
+        <Friends/> 
+    </div>
+    <div class="row">
+        <h2>Products</h2>
+        <Products/>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Friends from "@/components/Friends";
+import Products from "@/components/Products.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: "App",
+    components: {
+        Friends,
+        Products,
+    },
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +31,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 </style>
